@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Curso Javascript - 2.3 Lidando com elementos</title>
+    </head>
+    <body>
+        
+        <div id="app">
+            <input id="none"/>
+        </div>
+
+        <script>
+            
+            var linkElement = document.createElement('a');
+
+            linkElement.setAttribute('href', 'http://rocketseat.com.br');
+            linkElement.setAttribute('title', 'Site da Rocketseat');
+            
+            var textElement = document.createTextNode('Acessar site da Rocketseat');
+            linkElement.appendChild(textElement);
+
+            var containerElement = document.querySelector('#app');
+
+            containerElement.appendChild(linkElement);
+
+            //removendo um elemento
+            var inputElement = document.querySelector('#none');
+            containerElement.removeChild(inputElement);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Curso Javascript - Desafio 01 - Exercicio 05</title>
+    </head>
+    <body>
+        <script>
+
+            //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of
+            //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/join
+
+            function objetoUsuarios(usuarios){
+
+                //const somente leitura, let pode alterar a variável dentro do bloco
+                for (const valor of usuarios){
+
+                    var nome = valor.nome;
+                    var habilidades = valor.habilidades.join();
+                    var retorno = "O "+nome+" possui as habilidades: "+habilidades;
+                    console.log(retorno);
+                }
+            }
+
+            var usuarios = [  
+                {    nome: "Diego",    habilidades: ["Javascript", "ReactJS", "Redux"]  },
+                {    nome: "Gabriel",    habilidades: ["VueJS", "Ruby on Rails", "Elixir"]} 
+            ];
+
+            objetoUsuarios(usuarios);
+
+
+        </script>
+    </body>
+</html>

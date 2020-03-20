@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Curso Javascript - Desafio 01 - Exercicio 01</title>
+    </head>
+    <body>
+        <script>
+            var rua, bairro, cidade, uf;
+            var numero;
+
+            function enderecoCompleto (endereco_obj){
+
+                rua = endereco_obj.rua;
+                bairro = endereco_obj.bairro;
+                cidade = endereco_obj.cidade;
+                uf = endereco_obj.uf;
+                numero = endereco_obj.numero;
+
+                var retorno = "O usuário mora em "+cidade+" / "+uf;
+                retorno +=", no bairro "+bairro;
+                retorno +=", na rua \""+rua+"\" com nº "+numero+".";
+                
+                return retorno;
+
+            }
+
+            var endereco = {
+                rua: "Rua dos Pinheiros",
+                numero: 1293,
+                bairro: "Centro",
+                cidade: "São Paulo",
+                uf: "SP" 
+            };
+
+            var retorno = enderecoCompleto(endereco);
+            console.log(retorno);
+
+        </script>
+    </body>
+</html>

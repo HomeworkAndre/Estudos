@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Curso Javascript - Desafio 01 - Exercicio 03</title>
+    </head>
+    <body>
+        <script>
+            //https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
+            
+            function temHabilidade(skills) {
+                var index = skills.indexOf("Javascript");
+                return (index >= 0) ? true : false;
+            }
+            var skills = ["Javascript", "ReactJS", "React Native"];
+            var retorno = temHabilidade(skills); // true ou false
+            console.log(retorno);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Curso Javascript - Desafio 02 - Exercicio 01</title>
+    </head>
+    <body>
+
+        <div id="app">
+            <button name="novo_quadrado" class="botao">NOVO QUADRADO</button>
+            <button name="remove_quadrado" class="botao">REMOVE QUADRADO</button>
+        </div>
+        
+        <script>
+            
+            var btnElementNovoQuadrado = document.querySelector('button[name=novo_quadrado]');
+            btnElementNovoQuadrado.onclick = function(){
+
+                var divElement = document.createElement('div');
+                divElement.setAttribute('id', 'quadrado');
+                divElement.style.width = 100;
+                divElement.style.height = 100;
+                divElement.style.backgroundColor = '#f00';
+
+                var containerElement = document.querySelector('#app');
+                containerElement.appendChild(divElement);
+
+            }
+
+            var btnElementRemoveQuadrado = document.querySelector('button[name=remove_quadrado]');
+            btnElementRemoveQuadrado.onclick = function(){
+
+                var containerElement = document.querySelector('#app');
+                var remove_elemento = document.querySelector("#quadrado");
+                containerElement.removeChild(remove_elemento);
+                
+            }
+            
+        </script>
+    </body>
+</html>

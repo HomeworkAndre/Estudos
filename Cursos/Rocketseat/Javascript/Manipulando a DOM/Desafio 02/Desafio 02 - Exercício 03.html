@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Curso Javascript - Desafio 02 - Exercicio 03</title>
+    </head>
+    <body>
+        <div id="app">
+            <ul id="nomes"></ul>
+        </div>
+
+        <script>
+            
+            var nomes = ["Diego", "Gabriel", "Lucas"];
+
+            var ulElement = document.querySelector("#nomes");            
+
+            for (const valor of nomes){
+                var liElement = document.createElement("li");
+                var nome = document.createTextNode(valor);
+                liElement.append(nome);
+                ulElement.appendChild(liElement);
+               
+            }            
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Curso Javascript - Desafio 02 - Exercicio 04</title>
+    </head>
+    <body>
+        <div id="app">
+            <ul id="nomes"></ul>
+            <br><br>
+            <input type="text" name="nome" id="nome">
+            <button onClick="adicionar()" id="adicionar">Adicionar</button>
+        </div>
+        <script>
+
+             var nomes = ["Diego", "Gabriel", "Lucas"];                       
+
+             var ulElement = document.querySelector("#nomes");
+
+            for (const valor of nomes){
+ 
+                var liElement = document.createElement("li");
+                var nome = document.createTextNode(valor);
+                liElement.append(nome);
+                ulElement.appendChild(liElement);               
+            }
+
+            function adicionar(){
+                
+                var liElement = document.createElement("li");
+                var inputNome = document.querySelector("input[name=nome]");
+                var valor = inputNome.value;
+                var nome = document.createTextNode(valor);
+                if(valor != ""){
+                    liElement.append(nome);
+                    ulElement.appendChild(liElement);
+                }              
+                document.getElementById('nome').value="";
+            }       
+
+        </script>
+    </body>
+</html>
